@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jidescolimited</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fade api link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+
+<body>
+    <div id="home">
+        <div class="navbar">
+            <img src="./image/Screenshot_20200921-204225.png" class="logo">
+            <img id="menu" src="./image/icon-menu.svg" alt="" id="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#service">Our service</a></li>
+                <li><a href="#contact">Contact us </a></li>
+            </ul>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav id="nav2">
+            <div id="close">
+                <img id="exit" src="./image/icon-close-menu.svg" alt="" id="exit">
+            </div>
+
+            <a href="#home" class="nav-link">
+                <p class="nav-p">Home</p>
+            </a>
+            <a href="#about" class="nav-link">
+                <p class="nav-p">About us</p>
+            </a>
+            <a href="#service" class="nav-link">
+                <p class="nav-p">Our service</p>
+            </a>
+            <a href="#contact" class="nav-link">
+                <p class="nav-p">Contact us</p>
+            </a>
+            </a>
+        </nav>
+        <div class="content">
+            <h1>FIND YOUR DREAM HOME</h1>
+            <P>Welcome to Jidescolimited where your everyday accommodation needs are met</P>
+            <div>
+                <button type="button"><span></span>CONTACT US</button>
+                <button type="button"><span></span>MEET AN AGENT</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- about us section -->
+    <section id="about">
+        <div class="jide-container" data-aos="fade-in">
+            <div class="img-div">
+                <img src="./image/trade img.jpg" alt="">
+            </div>
+            <div class="abt-divs">
+                <h1>Jidecosilimited</h1>
+                <p>we are your guranteed company in providing luxurious accomodations at very affordable price within
+                    and outside Enugu town </p>
+                <div class="buttondiv">
+                    <button type="button"><span></span>Get in touch</button>
+                </div>
+            </div>
+        </div>
+        <div class="agent-container" data-aos="fade-in">
+            <div class="img-div">
+                <img src="./image/agents img.jpg" alt="">
+            </div>
+            <div class="abt-divs">
+                <h1>Our Agents</h1>
+                <p>with our 24/7 active agents on the go to meet your everyday accomodation needs you don't have to
+                    worry about
+                    getting a perfect home. </p>
+                <div class="buttondiv">
+                    <button type="button"><span></span>Talk to an agent</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our service section -->
+    <section id="service">
+        <div class="container" data-aos="fade-in">
+            <div class="box">
+                <i class="fa-regular fa-bookmark"></i>
+                <h3>Sales of Land</h3>
+                <p>We provide and sale affordable lands in strategic loactions, within and outside Enugu town. both in
+                    <strong> hecters and plots.</strong>
+                </p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-sign-hanging"></i>
+                <h3>Rental/Purchase</h3>
+                <p>We locate luxurious and affordable homes & shops for <strong>Rent and Purchase</strong> within Enugu
+                    town. </p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-paint-roller"></i>
+                <h3>Painting of property</h3>
+                <p>We are commited to giving you the brightest and exclusive desing/color to your dream home making it
+                    stand out among the rest.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact us page -->
+    <div id="contact" data-aos="fade-in">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>Get in Touch</h3>
+            <input type="text" id="name" placeholder="your name" required>
+            <input type="email" id="email" placeholder="email" required>
+            <input type="tel" id="phone" placeholder="phone number" required>
+            <textarea id="message" rows="4" placeholder="How can we help you"></textarea>
+            <button type="submit">Send</button>
+            <div class="icons">
+                <i class="fa-regular fa-envelope"><a href="mailto:jidecosicproperties@gmail.com" target="_blank">jidecosicproperties@gmail.com</a></i>
+                <i class="fa-solid fa-phone"><a href="tel:+234 803 711 6705">+234 803 711 6705</a></i>
+                <i class="fa-brands fa-instagram"><a href="https://instagram.com/jidecosiclimited4all">jidecosiclimited4all</a></i> 
+                <i class="fa-brands fa-facebook"><a href="sms:+234 803 711 6705">jidecosiclimited4all</a> </i>
+            </div>
+        </form>
+    </div>
+
+
+
+    <!-- menu js -->
+    <script>
+        let menu = document.getElementById("menu")
+        let nav2 = document.querySelector("#nav2")
+        let back = document.querySelector("#exit")
+
+        menu.addEventListener("click", () => {
+            nav2.style.right = 0
+            nav2.style.transition = "right 0.7s ease-in"
+        })
+
+        back.addEventListener("click", () => {
+            nav2.style.right = "-300px"
+            nav2.style.transition = "right 0.7s ease-in"
+        })
+    </script>
+
+
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000, //to change the animation duration
+            once: false, // change animation time of occurance (true for once false for infinity)
+        });
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "lordskenzy@gmail.com",
+                Password: "Chika$12",
+                To: 'softtechdsoftware1@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "PURCHASE OF PROPERTY",
+                Body: "Name: " + document.getElementById('name').value
+                + "<br> Email: " +document.getElementById('email').value
+                + "<br> Phone no: " +document.getElementById('phone').value
+                + "<br> Message: " +document.getElementById('message').value
+            }).then(
+                message => alert("message sent sucessfully")
+            );
+        }
+    </script>
+</body>
+
+</html>
